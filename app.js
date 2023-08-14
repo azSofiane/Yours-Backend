@@ -19,7 +19,12 @@ var annoncesRouter = require("./routes/annonces");
 var app = express();
 
 const cors = require("cors");
-app.use(cors());
+const corsOptions = {
+  origin: ['https://yours-frontend.vercel.app'],
+  credentials: true
+};
+
+app.use(cors(corsOptions));
 
 app.use(logger("dev"));
 app.use(express.json());
