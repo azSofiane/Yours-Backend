@@ -1,6 +1,5 @@
-require("module-alias/register");
 require("dotenv").config();
-require("@config/config");
+require("./config/config");
 
 var path = require("path");
 
@@ -8,14 +7,14 @@ var express = require("express");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 
-var indexRouter = require("@routes/index");
+var indexRouter = require("./routes/index");
 
-var inscriptionRouter = require("@routes/inscription");
-var connexionRouter = require("@routes/connexion");
-var reinisialisermdpRouter = require("@routes/reinisialisermdp");
-var elevesRouter = require("@routes/eleves");
-var professionnelsRouter = require("@routes/professionnels");
-var annoncesRouter = require("@routes/annonces");
+var inscriptionRouter = require("./routes/inscription");
+var connexionRouter = require("./routes/connexion");
+var reinisialisermdpRouter = require("./routes/reinisialisermdp");
+var elevesRouter = require("./routes/eleves");
+var professionnelsRouter = require("./routes/professionnels");
+var annoncesRouter = require("./routes/annonces");
 
 var app = express();
 
