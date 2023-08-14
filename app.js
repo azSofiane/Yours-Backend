@@ -19,12 +19,7 @@ var annoncesRouter = require("./routes/annonces");
 var app = express();
 
 const cors = require("cors");
-const corsOptions = {
-  origin: ["*"],
-  credentials: true, // Permettre l'envoi des cookies lors des requêtes CORS (si besoin)
-};
-
-app.use(cors(corsOptions));
+app.use(cors());
 
 app.use(logger("dev"));
 app.use(express.json());
