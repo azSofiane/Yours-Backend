@@ -47,7 +47,7 @@ router.post('/forgot-password', async (req, res) => {
         professionnel.save();
       }
 
-      // Envoyer le jeton de réinitialisation à l'adresse e-mail de l'utilisateur
+      // Envoyer le jeton de réinitialisation à l'adresse e-mail de l'utilisateur.
       sendResetPasswordEmail(email, resetToken);
 
       res.json({ result: true, message: 'Instructions de réinitialisation de mot de passe envoyées à votre adresse e-mail' });
